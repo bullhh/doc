@@ -46,7 +46,7 @@
                     *  `for_each_unit(unit)`
                         * pci 设备
                             * `hypervisor/pci.c`
-                            * `pci_init`
+                            * `pci_mmio_count_regions`
                         * x86相关的 unit
                             1. `hypervisor/arch/x86/cat.c`
                                 * Cache Allocation Technology
@@ -55,30 +55,68 @@
                             3. `hypervisor/arch/x86/vtd.c`
                                 * VT-d
             * **`arch_cell_create`**
+                * `vcpu_cell_init`
+                    * `vcpu_vendor_cell_init`
+                        * 位于 `hypervisor/arch/x86/vmx.c`
+                        * allocate io_bitmap
+                        * build root EPT of cell
+                        * Map the special APIC access page at the default address (XAPIC_BASE)
+                * copy io bitmap from cell config
+                * Shrink PIO access of root cell
+                * permit access to the PM timer
             * 各个 unit 的 cell_init（pci，ioapic之类的）
                 ```C
                   for_each_unit(unit) {
                     err = unit->cell_init(cell);
                   }
                 ```
-            * 建立 cell memory regions 的内存映射 与 root cell 的内存解映射
-                    ```C
-                	for_each_mem_region(mem, cell->config, n) {
-                        if (!(mem->flags & (JAILHOUSE_MEM_COMM_REGION |
-                                    JAILHOUSE_MEM_ROOTSHARED))) {
-                            err = unmap_from_root_cell(mem);
-                            if (err)
-                                goto err_destroy_cell;
-                        }
-
-                        if (JAILHOUSE_MEMORY_IS_SUBPAGE(mem))
-                            err = mmio_subpage_register(cell, mem);
-                        else
-                            err = arch_map_memory_region(cell, mem);
-                        if (err)
-                            goto err_destroy_cell;
-	                }
-                    ```
+                * `pci_cell_init`
+                    * 注册 `pci_mmconfig_access_handler`
+                    * 从 root cell 中移除 device
+                        ```C
+                        root_device = pci_get_assigned_device(&root_cell,
+						      dev_infos[ndev].bdf);
+                        if (root_device)
+                            pci_remove_physical_device(root_device);
+                        ```
+                    * 将 device 加到这个 guest cell 里面
+                        * `pci_add_physical_device`
+                            * `arch_pci_add_physical_device`
+                                * `iommu_add_pci_device`
+                                    * 定义在 `hypervisor/arch/x86/vtd.c`
+                                    * 
+                            * 建立对 msix_table 的映射
+                            * 注册 mmio handler `pci_msix_access_handler`
+                            * `pci_reset_device(device);`
+                        * 读取 msi/msix 信息并保存
+                            ```C
+                            for_each_pci_cap(cap, device, ncap)
+                                if (cap->id == PCI_CAP_MSI)
+                                    pci_save_msi(device, cap);
+                                else if (cap->id == PCI_CAP_MSIX)
+                                    pci_save_msix(device, cap);
+                            ```
+            * Shrinking the new cell's CPUs
+            * 解除 与 root cell 的内存映射
+            * 建立 guest cell 的内存映射
+                * `arch_map_memory_region`
+                    * `vcpu_map_memory_region`
+                        * 填 ept 的页表项
+                    * `iommu_map_memory_region`
+                        * 填 iommu 的页表项
+            * `config_commit(cell);`
+                * Apply system configuration changes
+                * `arch_flush_cell_vcpu_caches`
+                * `arch_config_commit`
+                    * `iommu_config_commit`
+                        * 位于 `hypervisor/arch/x86/vtd.c`
+                    * `ioapic_config_commit`
+                * `pci_config_commit`
+                    * PCI_CAP_MSI
+                        * `arch_pci_update_msi`
+                    * PCI_CAP_MSIX
+                        * `pci_update_msix`
+                        * `pci_suppress_msix`
             * cell_resume(&root_cell);
     * `cell_register(cell)`
         * `list_add_tail(&cell->entry, &cells);`
@@ -111,6 +149,8 @@
     * `jailhouse_call_arg1(JAILHOUSE_HC_CELL_START, cell->id)`
         * HVC 调用 hypervisor 的 `cell_start`， 启动目标 cell
             * 调用 `unmap_from_root_cell` 解除 root cell 对这个 cell 的 image 的地址映射
+            * 调用 `config_commit(NULL);`
+                * Apply system configuration changes.
             * 设置 `comm_region`, a consistent Communication Region state to the cell
             * `pci_cell_reset(cell);`
                     ```C
