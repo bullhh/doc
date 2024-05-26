@@ -30,7 +30,7 @@ marp: true
     * `modules/axhal/src/platform/pc_x86`
     1. features
         * ugly code style
-        ![alt text](images/hal_new_feature.png)
+        ![alt text](../images/hal_new_feature.png)
 
 ---
 
@@ -39,7 +39,7 @@ marp: true
     1. features
     2. A different platform
         * redundant codes
-        ![alt text](images/hal_new_platform.jpg)
+        ![alt text](../images/hal_new_platform.jpg)
 
 ---
 
@@ -105,7 +105,7 @@ marp: true
 
 ---
 * Obstacle exists in version control
-![h:500px](images/hypercraft_conflict.png)
+![h:500px](../images/hypercraft_conflict.png)
 
 ---
 * Obstacle exists in version control
