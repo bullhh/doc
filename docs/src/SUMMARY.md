@@ -1,3 +1,7 @@
 # AxVisor Architecture Book
 
-- [基于 ArceOS 的统一模块化 Hypervisor 设计文档](arceos-hypervisor-arch.md)
+- [AxVisor 设计文档](./arch_cn.md)
+- [AxVisor Overall Arch](./arch_en.md)
+- [Detail designs](./detail_design.md)
+    - [VM-Exit](./designs/multi_layer_VM-Exit.md)
+- [Discusstions](./discusstions.md)

@@ -1,6 +1,5 @@
-# 基于 ArceOS 的统一模块化 Hypervisor 设计文档
+# AxVisor: 基于 ArceOS 的统一模块化 Hypervisor 设计文档
 
-> 我们是不是应该把 `axvisor` 的名字正式端上来了？现在的命名确实有些混乱。
 
 ## 1. 设计目标
 
@@ -66,8 +65,14 @@ ArceOS-Hypervisor 还支持混合的调度策略。对于不同的虚拟 CPU，�
 
 ![vmexit handling](assets/vmexit-handling.png)
 
+
 ### 3.3. 影子进程
 
-影子进程是一种通过将具体设备直通给虚拟机内的 Linux 等成品操作系统，让其他虚拟机通过虚拟机间通信和共享内存等方式与这个 Linux 进行通信，从而实现……的技术：
+影子进程是一种通过将具体设备直通给虚拟机内的 Linux 等成品操作系统，让其他虚拟机通过虚拟机间通信和共享内存等方式与这个 Linux 进行通信，从而实现……的技术
 
-![shadow process](assets/shadow-process.png)
+
+### 3.4 Virtio 设备实现
+
+AxVisor 实现 virtio-device 后端设备，具体的设备实现通过类似影子进程的设计转发给 Linux 实现
+
+![virtio](assets/virtio-backend.png)
