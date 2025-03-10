@@ -47,19 +47,16 @@ ArceOS-VMM 应用程序是整个 ArceOS-Hypervisor 的核心，它作为 ArceOS 
 
 基于 `axvcpu` 和 `axdevice` 模块，ArceOS-Hypervisor 实现了不同架构下的具体虚拟 CPU 和虚拟设备模块，虚拟 CPU 包括 `x86_vcpu`、`arm_vcpu` 和 `riscv_vcpu`，虚拟设备包括 `x86_vlapic`、`arm_gic` 以及正在实现的 `virtio_blk`、`virtio_net` 等等。这些模块实现了具体的虚拟化功能，并且通过 `axvcpu` 和 `axdevice` 模块提供的统一接口与其它模块进行交互，这使得代码的复用性和可移植性得到了极大的提高。
 
-### 2.6. axvisor_api？
+<!-- ### 2.6. axvisor_api？
 
 是否需要把 `axvisor_api` 提出来。好处可以写潜在与 ArceOS 解耦，提高可移植性的可能性。另外可以随便说说。
+-->
 
 ## 3. 运行流程
 
 ### 3.1. 虚拟 CPU 调度
 
-ArceOS-Hypervisor 的执行流程如下图所示：
-
-【似乎可以补一张图？】
-
-执行流程的核心是虚拟 CPU 的调度。在 ArceOS-Hypervisor 中，虚拟 CPU 是虚拟机的基本执行单元，每个虚拟机可以包含一个或多个虚拟 CPU。虚拟 CPU 的调度是通过复用 ArceOS 的任务调度机制实现的，每个虚拟 CPU 作为一个任务，由 ArceOS 的任务调度器进行调度：
+ArceOS-Hypervisor 的执行流程的核心是虚拟 CPU 的调度。在 ArceOS-Hypervisor 中，虚拟 CPU 是虚拟机的基本执行单元，每个虚拟机可以包含一个或多个虚拟 CPU。虚拟 CPU 的调度是通过复用 ArceOS 的任务调度机制实现的，每个虚拟 CPU 作为一个任务，由 ArceOS 的任务调度器进行调度：
 
 ![vcpu scheduling](assets/vcpu-scheduling-base.png)
 
@@ -94,7 +91,6 @@ AxVisor 实现 virtio-device 后端设备，具体的设备实现通过类似影
 
 ![virtio](assets/virtio-backend.png)
 
-
 ### 3.5. 影子进程
 
-影子进程是一种通过将具体设备直通给虚拟机内的 Linux 等成品操作系统，让其他虚拟机通过虚拟机间通信和共享内存等方式与这个 Linux 进行通信，从而实现……的技术
+影子进程是一种通过将具体设备直通给虚拟机内的 Linux 等成品操作系统，让其他虚拟机通过虚拟机间通信和共享内存等方式与这个 Linux 进行通信，从而利用 Linux 中的现有驱动程序来实现虚拟设备的一种技术。影子进程技术可以大大减少虚拟机监控器的开发工作量，提高虚拟机监控器的可移植性和可扩展性。
