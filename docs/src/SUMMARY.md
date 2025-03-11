@@ -5,3 +5,5 @@
 - [Detail designs](./detail_design.md)
     - [VM-Exit](./designs/multi_layer_VM-Exit.md)
 - [Discusstions](./discusstions.md)
+- [Quick Start](./start/index_cn.md)
+    - [Guest Linux](./start/linux_cn.md)
