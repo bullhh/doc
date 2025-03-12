@@ -1,0 +1,124 @@
+allocator v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/allocator)
+arceos-display v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/display)
+arceos-echoserver v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/echoserver)
+arceos-exception v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/exception)
+arceos-helloworld v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/helloworld)
+arceos-httpclient v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/httpclient)
+arceos-httpserver v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/httpserver)
+arceos-hv v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/hv)
+arceos-memtest v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/memtest)
+arceos-parallel v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/parallel)
+arceos-priority v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/priority)
+arceos-shell v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/fs/shell)
+arceos-sleep v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/sleep)
+arceos-udpserver v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/udpserver)
+arceos-yield v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/yield)
+arm_gic v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/arm_gic)
+arm_pl011 v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/arm_pl011)
+arrayvec v0.7.4
+autocfg v1.1.0
+axalloc v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axalloc)
+axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig)
+axdisplay v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdisplay)
+axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver)
+axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno)
+axfs v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axfs)
+axfs_devfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_devfs)
+axfs_ramfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_ramfs)
+axfs_vfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_vfs)
+axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal)
+axio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axio)
+axlog v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axlog)
+axnet v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axnet)
+axruntime v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axruntime)
+axsync v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axsync)
+axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask)
+az v1.2.1
+bit v0.1.1
+bit_field v0.10.2
+bitflags v1.3.2
+bitflags v2.3.2
+bitmap-allocator v0.1.0 (https://github.com/rcore-os/bitmap-allocator.git?rev=88e871a#88e871a5)
+bitmaps v3.2.0
+buddy_system_allocator v0.9.0
+byteorder v1.4.3
+capability v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/capability)
+cfg-if v1.0.0
+crate_interface v0.1.1 (proc-macro)
+crate_interface v0.1.1 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/crate_interface)
+driver_block v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_block)
+driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+driver_display v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_display)
+driver_net v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_net)
+driver_pci v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_pci)
+driver_virtio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_virtio)
+embedded-graphics v0.8.0
+embedded-graphics-core v0.4.0
+fatfs v0.4.0 (https://github.com/rafalh/rust-fatfs?rev=a3a834e#a3a834ef)
+fdt v0.1.5
+flatten_objects v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/flatten_objects)
+float-cmp v0.9.0
+getrandom v0.2.10
+handler_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/handler_table)
+hash32 v0.2.1
+hashbrown v0.12.3
+heapless v0.7.16
+hypercraft v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/hypercraft)
+indexmap v1.9.3
+kernel_guard v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/kernel_guard)
+lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+lazy_static v1.4.0
+libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax)
+libc v0.2.146
+linked_list v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/linked_list)
+lock_api v0.4.10
+log v0.4.19
+managed v0.8.0
+memoffset v0.9.0
+memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+micromath v2.0.0
+num-traits v0.2.15
+numeric-enum-macro v0.2.0
+page_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table)
+page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry)
+paste v1.0.12 (proc-macro)
+percpu v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/percpu)
+percpu_macros v0.1.0 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/percpu_macros)
+ppv-lite86 v0.2.17
+proc-macro2 v1.0.60
+quote v1.0.28
+rand v0.8.5
+rand_chacha v0.3.1
+rand_core v0.6.4
+ratio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/ratio)
+raw-cpuid v10.7.0
+raw-cpuid v11.0.1
+rustc_version v0.4.0
+rustversion v1.0.12 (proc-macro)
+scheduler v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/scheduler)
+scopeguard v1.1.0
+semver v1.0.17
+serde v1.0.164
+slab_allocator v0.3.1 (/home/aarkegz/source/tmp/arceos/crates/slab_allocator)
+smoltcp v0.9.1 (https://github.com/smoltcp-rs/smoltcp.git?rev=1f9b9f0#1f9b9f0c)
+spin v0.5.2
+spin v0.9.8
+spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock)
+stable_deref_trait v1.2.0
+static_assertions v1.1.0
+syn v1.0.109
+syn v2.0.18
+timer_list v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/timer_list)
+tock-registers v0.8.1
+toml_datetime v0.6.2
+toml_edit v0.19.10
+tuple_for_each v0.1.0 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/tuple_for_each)
+unicode-ident v1.0.9
+virtio-drivers v0.4.0 (https://github.com/rcore-os/virtio-drivers.git?rev=409ee72#409ee723)
+volatile v0.4.6
+winnow v0.4.7
+x2apic v0.4.2
+x86 v0.52.0
+x86_64 v0.14.10
+zerocopy v0.6.1
+zerocopy-derive v0.3.2 (proc-macro)

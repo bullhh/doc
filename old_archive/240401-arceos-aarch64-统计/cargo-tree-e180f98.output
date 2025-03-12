@@ -1,0 +1,437 @@
+allocator v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/allocator)
+├── bitmap-allocator v0.1.0 (https://github.com/rcore-os/bitmap-allocator.git?rev=88e871a#88e871a5)
+│   └── bit_field v0.10.2
+├── buddy_system_allocator v0.9.0
+└── slab_allocator v0.3.1 (/home/aarkegz/source/tmp/arceos/crates/slab_allocator)
+    └── buddy_system_allocator v0.9.0
+
+arceos-display v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/display)
+├── embedded-graphics v0.8.0
+│   ├── az v1.2.1
+│   ├── byteorder v1.4.3
+│   ├── embedded-graphics-core v0.4.0
+│   │   ├── az v1.2.1
+│   │   └── byteorder v1.4.3
+│   ├── float-cmp v0.9.0
+│   │   └── num-traits v0.2.15
+│   │       [build-dependencies]
+│   │       └── autocfg v1.1.0
+│   └── micromath v2.0.0
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax)
+    ├── axalloc v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axalloc)
+    │   ├── allocator v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/allocator) (*)
+    │   ├── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno)
+    │   │   └── log v0.4.19
+    │   ├── log v0.4.19
+    │   ├── memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+    │   └── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock)
+    │       ├── cfg-if v1.0.0
+    │       └── kernel_guard v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/kernel_guard)
+    │           ├── cfg-if v1.0.0
+    │           └── crate_interface v0.1.1 (proc-macro)
+    │               ├── proc-macro2 v1.0.60
+    │               │   └── unicode-ident v1.0.9
+    │               ├── quote v1.0.28
+    │               │   └── proc-macro2 v1.0.60 (*)
+    │               └── syn v2.0.18
+    │                   ├── proc-macro2 v1.0.60 (*)
+    │                   ├── quote v1.0.28 (*)
+    │                   └── unicode-ident v1.0.9
+    ├── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig)
+    │   └── cfg-if v1.0.0
+    │   [build-dependencies]
+    │   ├── serde v1.0.164
+    │   └── toml_edit v0.19.10
+    │       ├── indexmap v1.9.3
+    │       │   └── hashbrown v0.12.3
+    │       │   [build-dependencies]
+    │       │   └── autocfg v1.1.0
+    │       ├── toml_datetime v0.6.2
+    │       └── winnow v0.4.7
+    ├── axdisplay v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdisplay)
+    │   ├── axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver)
+    │   │   ├── axalloc v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axalloc) (*)
+    │   │   ├── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+    │   │   ├── axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal)
+    │   │   │   ├── axalloc v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axalloc) (*)
+    │   │   │   ├── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+    │   │   │   ├── axlog v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axlog)
+    │   │   │   │   ├── cfg-if v1.0.0
+    │   │   │   │   ├── crate_interface v0.1.1 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/crate_interface)
+    │   │   │   │   │   ├── proc-macro2 v1.0.60 (*)
+    │   │   │   │   │   ├── quote v1.0.28 (*)
+    │   │   │   │   │   └── syn v2.0.18 (*)
+    │   │   │   │   ├── log v0.4.19
+    │   │   │   │   └── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    │   │   │   ├── bitflags v2.3.2
+    │   │   │   ├── cfg-if v1.0.0
+    │   │   │   ├── crate_interface v0.1.1 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/crate_interface) (*)
+    │   │   │   ├── handler_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/handler_table)
+    │   │   │   ├── hypercraft v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/hypercraft)
+    │   │   │   │   ├── arrayvec v0.7.4
+    │   │   │   │   ├── bit_field v0.10.2
+    │   │   │   │   ├── bitflags v1.3.2
+    │   │   │   │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   │   │   │   ├── log v0.4.19
+    │   │   │   │   ├── memoffset v0.9.0
+    │   │   │   │   │   [build-dependencies]
+    │   │   │   │   │   └── autocfg v1.1.0
+    │   │   │   │   ├── memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+    │   │   │   │   ├── numeric-enum-macro v0.2.0
+    │   │   │   │   ├── page_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table)
+    │   │   │   │   │   ├── log v0.4.19
+    │   │   │   │   │   ├── memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+    │   │   │   │   │   └── page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry)
+    │   │   │   │   │       ├── bit_field v0.10.2
+    │   │   │   │   │       ├── bitflags v2.3.2
+    │   │   │   │   │       ├── memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+    │   │   │   │   │       ├── numeric-enum-macro v0.2.0
+    │   │   │   │   │       └── x86_64 v0.14.10
+    │   │   │   │   │           ├── bit_field v0.10.2
+    │   │   │   │   │           ├── bitflags v1.3.2
+    │   │   │   │   │           ├── rustversion v1.0.12 (proc-macro)
+    │   │   │   │   │           └── volatile v0.4.6
+    │   │   │   │   ├── page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry) (*)
+    │   │   │   │   ├── raw-cpuid v11.0.1
+    │   │   │   │   │   └── bitflags v2.3.2
+    │   │   │   │   ├── spin v0.9.8
+    │   │   │   │   │   └── lock_api v0.4.10
+    │   │   │   │   │       └── scopeguard v1.1.0
+    │   │   │   │   │       [build-dependencies]
+    │   │   │   │   │       └── autocfg v1.1.0
+    │   │   │   │   ├── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    │   │   │   │   ├── tock-registers v0.8.1
+    │   │   │   │   ├── x86 v0.52.0
+    │   │   │   │   │   ├── bit_field v0.10.2
+    │   │   │   │   │   ├── bitflags v1.3.2
+    │   │   │   │   │   └── raw-cpuid v10.7.0
+    │   │   │   │   │       └── bitflags v1.3.2
+    │   │   │   │   └── x86_64 v0.14.10 (*)
+    │   │   │   ├── kernel_guard v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/kernel_guard) (*)
+    │   │   │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   │   │   ├── log v0.4.19
+    │   │   │   ├── memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+    │   │   │   ├── page_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table) (*)
+    │   │   │   ├── page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry) (*)
+    │   │   │   ├── percpu v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/percpu)
+    │   │   │   │   ├── cfg-if v1.0.0
+    │   │   │   │   ├── log v0.4.19
+    │   │   │   │   ├── percpu_macros v0.1.0 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/percpu_macros)
+    │   │   │   │   │   ├── proc-macro2 v1.0.60 (*)
+    │   │   │   │   │   ├── quote v1.0.28 (*)
+    │   │   │   │   │   └── syn v2.0.18 (*)
+    │   │   │   │   ├── spin v0.9.8 (*)
+    │   │   │   │   └── x86 v0.52.0 (*)
+    │   │   │   ├── ratio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/ratio)
+    │   │   │   ├── raw-cpuid v11.0.1 (*)
+    │   │   │   ├── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    │   │   │   ├── static_assertions v1.1.0
+    │   │   │   ├── x2apic v0.4.2
+    │   │   │   │   ├── bit v0.1.1
+    │   │   │   │   ├── bitflags v1.3.2
+    │   │   │   │   ├── paste v1.0.12 (proc-macro)
+    │   │   │   │   ├── raw-cpuid v10.7.0 (*)
+    │   │   │   │   └── x86_64 v0.14.10 (*)
+    │   │   │   ├── x86 v0.52.0 (*)
+    │   │   │   └── x86_64 v0.14.10 (*)
+    │   │   │   [build-dependencies]
+    │   │   │   └── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+    │   │   ├── cfg-if v1.0.0
+    │   │   ├── driver_block v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_block)
+    │   │   │   └── driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+    │   │   ├── driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+    │   │   ├── driver_display v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_display)
+    │   │   │   └── driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+    │   │   ├── driver_net v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_net)
+    │   │   │   ├── driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+    │   │   │   └── spin v0.9.8 (*)
+    │   │   ├── driver_virtio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_virtio)
+    │   │   │   ├── driver_block v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_block) (*)
+    │   │   │   ├── driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+    │   │   │   ├── driver_display v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_display) (*)
+    │   │   │   ├── driver_net v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_net) (*)
+    │   │   │   └── virtio-drivers v0.4.0 (https://github.com/rcore-os/virtio-drivers.git?rev=409ee72#409ee723)
+    │   │   │       ├── bitflags v1.3.2
+    │   │   │       ├── log v0.4.19
+    │   │   │       └── zerocopy v0.6.1
+    │   │   │           ├── byteorder v1.4.3
+    │   │   │           └── zerocopy-derive v0.3.2 (proc-macro)
+    │   │   │               ├── proc-macro2 v1.0.60 (*)
+    │   │   │               ├── quote v1.0.28 (*)
+    │   │   │               └── syn v1.0.109
+    │   │   │                   ├── proc-macro2 v1.0.60 (*)
+    │   │   │                   ├── quote v1.0.28 (*)
+    │   │   │                   └── unicode-ident v1.0.9
+    │   │   └── log v0.4.19
+    │   ├── axsync v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axsync)
+    │   │   ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask)
+    │   │   │   ├── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+    │   │   │   ├── axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal) (*)
+    │   │   │   ├── cfg-if v1.0.0
+    │   │   │   ├── crate_interface v0.1.1 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/crate_interface) (*)
+    │   │   │   ├── kernel_guard v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/kernel_guard) (*)
+    │   │   │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   │   │   ├── log v0.4.19
+    │   │   │   ├── memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+    │   │   │   ├── percpu v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/percpu) (*)
+    │   │   │   ├── scheduler v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/scheduler)
+    │   │   │   │   └── linked_list v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/linked_list)
+    │   │   │   ├── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    │   │   │   └── timer_list v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/timer_list)
+    │   │   │   [dev-dependencies]
+    │   │   │   ├── axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal) (*)
+    │   │   │   ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+    │   │   │   └── rand v0.8.5
+    │   │   │       ├── libc v0.2.146
+    │   │   │       ├── rand_chacha v0.3.1
+    │   │   │       │   ├── ppv-lite86 v0.2.17
+    │   │   │       │   └── rand_core v0.6.4
+    │   │   │       │       └── getrandom v0.2.10
+    │   │   │       │           ├── cfg-if v1.0.0
+    │   │   │       │           └── libc v0.2.146
+    │   │   │       └── rand_core v0.6.4 (*)
+    │   │   └── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    │   │   [dev-dependencies]
+    │   │   ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+    │   │   └── rand v0.8.5 (*)
+    │   ├── driver_display v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_display) (*)
+    │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   └── log v0.4.19
+    ├── axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver) (*)
+    ├── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+    ├── axfs v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axfs)
+    │   ├── axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver) (*)
+    │   ├── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+    │   ├── axfs_devfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_devfs)
+    │   │   ├── axfs_vfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_vfs)
+    │   │   │   ├── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+    │   │   │   ├── bitflags v2.3.2
+    │   │   │   └── log v0.4.19
+    │   │   ├── log v0.4.19
+    │   │   └── spin v0.9.8 (*)
+    │   ├── axfs_ramfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_ramfs)
+    │   │   ├── axfs_vfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_vfs) (*)
+    │   │   ├── log v0.4.19
+    │   │   └── spin v0.9.8 (*)
+    │   ├── axfs_vfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_vfs) (*)
+    │   ├── axio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axio)
+    │   │   └── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+    │   ├── axsync v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axsync) (*)
+    │   ├── capability v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/capability)
+    │   │   ├── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+    │   │   └── bitflags v2.3.2
+    │   ├── cfg-if v1.0.0
+    │   ├── driver_block v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_block) (*)
+    │   ├── fatfs v0.4.0 (https://github.com/rafalh/rust-fatfs?rev=a3a834e#a3a834ef)
+    │   │   ├── bitflags v1.3.2
+    │   │   └── log v0.4.19
+    │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   └── log v0.4.19
+    │   [dev-dependencies]
+    │   ├── axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver) (*)
+    │   ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+    │   └── driver_block v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_block) (*)
+    ├── axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal) (*)
+    ├── axio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axio) (*)
+    ├── axlog v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axlog) (*)
+    ├── axnet v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axnet)
+    │   ├── axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver) (*)
+    │   ├── axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+    │   ├── axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal) (*)
+    │   ├── axio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axio) (*)
+    │   ├── axsync v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axsync) (*)
+    │   ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+    │   ├── cfg-if v1.0.0
+    │   ├── driver_net v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_net) (*)
+    │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   ├── log v0.4.19
+    │   └── smoltcp v0.9.1 (https://github.com/smoltcp-rs/smoltcp.git?rev=1f9b9f0#1f9b9f0c)
+    │       ├── bitflags v1.3.2
+    │       ├── byteorder v1.4.3
+    │       ├── cfg-if v1.0.0
+    │       ├── heapless v0.7.16
+    │       │   ├── hash32 v0.2.1
+    │       │   │   └── byteorder v1.4.3
+    │       │   ├── spin v0.9.8 (*)
+    │       │   └── stable_deref_trait v1.2.0
+    │       │   [build-dependencies]
+    │       │   └── rustc_version v0.4.0
+    │       │       └── semver v1.0.17
+    │       ├── log v0.4.19
+    │       └── managed v0.8.0
+    ├── axruntime v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axruntime)
+    │   ├── arm_gic v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/arm_gic)
+    │   │   ├── log v0.4.19
+    │   │   ├── spin v0.9.8 (*)
+    │   │   └── tock-registers v0.8.1
+    │   ├── axalloc v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axalloc) (*)
+    │   ├── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+    │   ├── axdisplay v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdisplay) (*)
+    │   ├── axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver) (*)
+    │   ├── axfs v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axfs) (*)
+    │   ├── axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal) (*)
+    │   ├── axlog v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axlog) (*)
+    │   ├── axnet v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axnet) (*)
+    │   ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+    │   ├── bitflags v1.3.2
+    │   ├── crate_interface v0.1.1 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/crate_interface) (*)
+    │   ├── hypercraft v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/hypercraft) (*)
+    │   ├── kernel_guard v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/kernel_guard) (*)
+    │   ├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+    │   ├── lazy_static v1.4.0
+    │   │   └── spin v0.5.2
+    │   ├── page_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table) (*)
+    │   ├── page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry) (*)
+    │   ├── percpu v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/percpu) (*)
+    │   ├── raw-cpuid v11.0.1 (*)
+    │   ├── spin v0.9.8 (*)
+    │   ├── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    │   ├── x2apic v0.4.2 (*)
+    │   ├── x86 v0.52.0 (*)
+    │   └── x86_64 v0.14.10 (*)
+    ├── axsync v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axsync) (*)
+    ├── axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+    ├── flatten_objects v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/flatten_objects)
+    │   └── bitmaps v3.2.0
+    ├── hypercraft v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/hypercraft) (*)
+    ├── spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+    └── static_assertions v1.1.0
+    [build-dependencies]
+    └── axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+
+arceos-echoserver v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/echoserver)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-exception v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/exception)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-helloworld v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/helloworld)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-httpclient v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/httpclient)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-httpserver v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/httpserver)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-hv v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/hv)
+├── arrayvec v0.7.4
+├── fdt v0.1.5
+├── lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+├── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+├── page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry) (*)
+└── spin v0.9.8 (*)
+
+arceos-memtest v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/memtest)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-parallel v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/parallel)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-priority v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/priority)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-shell v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/fs/shell)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-sleep v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/sleep)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-udpserver v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/net/udpserver)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arceos-yield v0.1.0 (/home/aarkegz/source/tmp/arceos/apps/task/yield)
+└── libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+arm_gic v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/arm_gic) (*)
+
+arm_pl011 v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/arm_pl011)
+└── tock-registers v0.8.1
+
+axalloc v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axalloc) (*)
+
+axconfig v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axconfig) (*)
+
+axdisplay v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdisplay) (*)
+
+axdriver v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axdriver) (*)
+
+axerrno v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axerrno) (*)
+
+axfs v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axfs) (*)
+
+axfs_devfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_devfs) (*)
+
+axfs_ramfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_ramfs) (*)
+
+axfs_vfs v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axfs_vfs) (*)
+
+axhal v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axhal) (*)
+
+axio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/axio) (*)
+
+axlog v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axlog) (*)
+
+axnet v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axnet) (*)
+
+axruntime v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axruntime) (*)
+
+axsync v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axsync) (*)
+
+axtask v0.1.0 (/home/aarkegz/source/tmp/arceos/modules/axtask) (*)
+
+capability v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/capability) (*)
+
+crate_interface v0.1.1 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/crate_interface) (*)
+
+driver_block v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_block) (*)
+
+driver_common v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_common)
+
+driver_display v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_display) (*)
+
+driver_net v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_net) (*)
+
+driver_pci v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_pci)
+└── virtio-drivers v0.4.0 (https://github.com/rcore-os/virtio-drivers.git?rev=409ee72#409ee723) (*)
+
+driver_virtio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/driver_virtio) (*)
+
+flatten_objects v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/flatten_objects) (*)
+
+handler_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/handler_table)
+
+hypercraft v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/hypercraft) (*)
+
+kernel_guard v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/kernel_guard) (*)
+
+lazy_init v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/lazy_init)
+
+libax v0.1.0 (/home/aarkegz/source/tmp/arceos/ulib/libax) (*)
+
+linked_list v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/linked_list)
+
+memory_addr v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/memory_addr)
+
+page_table v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table) (*)
+
+page_table_entry v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/page_table_entry) (*)
+
+percpu v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/percpu) (*)
+
+percpu_macros v0.1.0 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/percpu_macros) (*)
+
+ratio v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/ratio)
+
+scheduler v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/scheduler) (*)
+
+slab_allocator v0.3.1 (/home/aarkegz/source/tmp/arceos/crates/slab_allocator) (*)
+
+spinlock v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/spinlock) (*)
+
+timer_list v0.1.0 (/home/aarkegz/source/tmp/arceos/crates/timer_list)
+
+tuple_for_each v0.1.0 (proc-macro) (/home/aarkegz/source/tmp/arceos/crates/tuple_for_each)
+├── proc-macro2 v1.0.60 (*)
+├── quote v1.0.28 (*)
+└── syn v2.0.18 (*)
