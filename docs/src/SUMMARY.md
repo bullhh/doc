@@ -7,3 +7,4 @@
 - [Discusstions](./discusstions.md)
 - [Quick Start](./start/index_cn.md)
     - [Guest Linux](./start/linux_cn.md)
+    - [2 Guest ArceOS + Linux](./start/2vm_arceos_linux.md)  
