@@ -1,0 +1,65 @@
+arrayvec v0.7.4
+autocfg v1.1.0
+az v1.2.1
+bit v0.1.1
+bit_field v0.10.2
+bitflags v1.3.2
+bitflags v2.3.2
+bitmap-allocator v0.1.0 (https://github.com/rcore-os/bitmap-allocator.git?rev=88e871a#88e871a5)
+bitmaps v3.2.0
+buddy_system_allocator v0.9.0
+byteorder v1.4.3
+cfg-if v1.0.0
+crate_interface v0.1.1 (proc-macro)
+embedded-graphics v0.8.0
+embedded-graphics-core v0.4.0
+fatfs v0.4.0 (https://github.com/rafalh/rust-fatfs?rev=a3a834e#a3a834ef)
+fdt v0.1.5
+float-cmp v0.9.0
+getrandom v0.2.10
+hash32 v0.2.1
+hashbrown v0.12.3
+heapless v0.7.16
+indexmap v1.9.3
+lazy_static v1.4.0
+libc v0.2.146
+lock_api v0.4.10
+log v0.4.19
+managed v0.8.0
+memoffset v0.9.0
+micromath v2.0.0
+num-traits v0.2.15
+numeric-enum-macro v0.2.0
+paste v1.0.12 (proc-macro)
+ppv-lite86 v0.2.17
+proc-macro2 v1.0.60
+quote v1.0.28
+rand v0.8.5
+rand_chacha v0.3.1
+rand_core v0.6.4
+raw-cpuid v10.7.0
+raw-cpuid v11.0.1
+rustc_version v0.4.0
+rustversion v1.0.12 (proc-macro)
+scopeguard v1.1.0
+semver v1.0.17
+serde v1.0.164
+smoltcp v0.9.1 (https://github.com/smoltcp-rs/smoltcp.git?rev=1f9b9f0#1f9b9f0c)
+spin v0.5.2
+spin v0.9.8
+stable_deref_trait v1.2.0
+static_assertions v1.1.0
+syn v1.0.109
+syn v2.0.18
+tock-registers v0.8.1
+toml_datetime v0.6.2
+toml_edit v0.19.10
+unicode-ident v1.0.9
+virtio-drivers v0.4.0 (https://github.com/rcore-os/virtio-drivers.git?rev=409ee72#409ee723)
+volatile v0.4.6
+winnow v0.4.7
+x2apic v0.4.2
+x86 v0.52.0
+x86_64 v0.14.10
+zerocopy v0.6.1
+zerocopy-derive v0.3.2 (proc-macro)
