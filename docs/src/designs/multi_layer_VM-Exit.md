@@ -8,6 +8,8 @@ VM-Exits are used for device emulation and vCPU scheduling.
 
 VM-Exits in x86_64, aarch64 and riscv64 follow the same design logic but share a slightly different implementation.
 
+![](../assets/vmexit-handling.png)
+
 ## Inner-VCpu handling
 
 Under x86_64, some VM-Exit items are architecture specific (e.g. `VmxExitReason::CR_ACCESS`, `VmxExitReason::CPUID`).
