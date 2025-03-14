@@ -66,11 +66,11 @@ The source code for mdBook is available at: https://github.com/rust-lang/mdBook
 
 ## 部署
 
-目前，AxVisor 的文档网站托管在了 GitHub Pages 上，仓库默认配置为通过 GitHub Action 进行部署（Github 本身支持 Actions 和 Branch 两种部署方式），当把源码提交到仓库之后将自动触发 GitHub Action 进行部署。
+目前，AxVisor 的文档网站托管在了 GitHub Pages 上：https://arceos-hypervisor.github.io/doc/，仓库默认配置为通过 GitHub Action 进行部署（Github 本身支持 Actions 和 Branch 两种部署方式），当把源码提交到仓库之后将自动触发 GitHub Action 进行部署。
 
 ## 如何贡献
 
-欢迎 FROK 本仓库，然后提交 PR。
+欢迎 FORK 本仓库，然后提交 PR。
 
 ## 许可协议
 
@@ -80,4 +80,3 @@ AxVisor Book 使用如下开源协议：
  * MulanPubL-2.0
  * MulanPSL2
  * GPL-3.0-or-later
-

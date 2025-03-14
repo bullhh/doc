@@ -66,12 +66,11 @@ The source code for mdBook is available at: https://github.com/rust-lang/mdBook
 
 ## Deploy
 
-Currently, the AxVisor documentation website is hosted on GitHub Pages. The repository is configured to deploy via GitHub Actions by default (GitHub supports both Actions and Branch deployment methods). Once the source code is committed to the repository, GitHub Actions will be automatically triggered to deploy the site.
+Currently, the AxVisor documentation website is hosted on GitHub Pages: https://arceos-hypervisor.github.io/doc/. The repository is configured to deploy via GitHub Actions by default (GitHub supports both Actions and Branch deployment methods). Once the source code is committed to the repository, GitHub Actions will be automatically triggered to deploy the site.
 
 ## Contributing
 
 Feel free to fork this repository and submit a PR.
-
 
 ## License
 
@@ -81,4 +80,3 @@ AxVisor Book uses the following open-source license:
  * MulanPubL-2.0
  * MulanPSL2
  * GPL-3.0-or-later
-
